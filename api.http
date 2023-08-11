@@ -1,0 +1,33 @@
+### get all movies
+GET http://localhost:3000/movies
+
+### get movies by id
+GET http://localhost:3000/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+
+### get movies by genre
+GET http://localhost:3000/movies?genre=action
+
+### create new movie
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "The Covenant",
+    "year": 2023,
+    "director": "Guy Ritchie",
+    "duration": 123,
+    "poster": "https://m.media-amazon.com/images/M/MV5BNmQzOWZhOTMtZTcxNC00MTdkLWEwYmUtOWVmOTFhNTdkNjRkXkEyXkFqcGdeQXVyODk2NDQ3MTA@._V1_.jpg",
+    "genre": ["Action", "Suspense"],
+    "rate": 6.9
+}
+
+### update movie
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "id": 13551,
+    "title": "The Real Redemption",
+    "year": 1994,
+    "duration": 125
+}

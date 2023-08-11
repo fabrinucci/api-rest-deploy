@@ -37,7 +37,7 @@ app.get('/', (req: Request, res: Response) => {
     <div>
       <h2>Welcome to my api-rest</h2>
       <h4>
-        <a href='http://localhost:${PORT}/movies'>Go to movies<a/>
+        <a href='/movies'>Go to movies<a/>
       </h4>
     </div>
     `

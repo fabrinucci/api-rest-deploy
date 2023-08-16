@@ -9,6 +9,9 @@ export interface Movie {
   rate?: number;
 }
 
+export interface MovieController extends Omit<Movie, 'id'> {}
+export interface MovieOptional extends Partial<MovieController> {}
+
 export type uuid = `${string}-${string}-${string}-${string}-${string}`;
 
 export enum Genre {
@@ -25,9 +28,11 @@ export enum Genre {
   Terror = 'Terror',
 }
 
-export interface RequestParams {}
+export interface RequestParams {
+  id: uuid;
+}
 export interface ResponseBody {}
-export interface RequestBody {}
+export interface RequestBody extends Movie {}
 export interface RequestQuery {
   genre: string;
 }
